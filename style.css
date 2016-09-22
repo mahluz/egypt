@@ -1,0 +1,339 @@
+@charset "utf-8";
+/* CSS Document */
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ this fixed width container surrounds the other divs ~~ */
+.container {
+	background-color: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+	font-family:awesome;
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background-color: #ADB96E;
+}
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+
+.content {
+	padding: 10px 0;
+}
+
+.cover {
+	padding:0;
+	background-image:url('images/background%20top.png');
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	height: 100vh;
+	width: 100vw;
+}
+
+.cover img {
+	display: block;
+	margin: 0 auto;
+	padding-top:10em;
+	transform: rotateY(40deg);
+ 	animation: one 2s infinite;
+ 	animation-direction: alternate;
+	
+		
+}
+@keyframes one {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+.cover h2{
+	color:#FFF;	
+}
+.cover h3 {
+	color:#CCC;	
+}
+.second {
+	background-color:#FFF;
+	padding:0;
+	height: 100vh;
+}
+
+.second h1{
+	font-weight:bold;
+	color:#C90;	
+}
+.second h2{
+	color:#FFF;
+}
+.kiri1 {
+	padding-top:6em;
+	padding-left:6em;
+	float:left;
+	
+}
+.kiri1 p {
+	color:#960;	
+}
+.kanan1 {
+	padding-top:8em;
+	padding-right:3em;
+	float:right;	
+	
+}
+.kanan1 img{
+	width:50vw;
+	height:80vh;	
+}
+.second2 {
+	background-color:#FFF;
+	padding:0;
+	height: 100vh;
+	width:100vw;
+}
+.satu {
+	float:left;
+	width:30vw;	
+}
+.satu img {
+	width:20vw;
+	height:80vh;
+	float:right;
+	padding-right:5em;	
+}
+.dua {
+	float:left;
+	width:40vw;	
+}
+.dua p ,h1{
+	color:#C09;	
+}
+.tiga {
+	float:left;
+	width:30vw;	
+}
+.tiga img{
+	width:20vw;
+	height:80vh;	
+}
+.third {
+	background-image:url('images/stars%20background.jpg');
+	padding:0;
+	height: 60vh;
+	width: 100vw;	
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.malamatas h1{
+	padding-top:0.5em;
+	color:#C3C;
+}
+.malamatas h2{
+	padding-top:0.2;
+	color:#C3C;	
+}
+.malambawah img{
+	padding-top:1em;
+	padding-left:3em;
+	padding-right:2em;
+	transition: all .2s ease-in-out;	
+}
+.malambawah img:hover {
+	transform: scale(1.1);
+}
+.fourth {
+	background-color:#FFF;
+	padding:0;
+	height:100vh;
+}
+.fifth {
+	background-color:#000;
+	padding:0;
+	height: 100vh;
+	width:100vw;		
+}
+.sixth {
+	background-color:#FFF;
+	padding:0;
+	height: 130vh;
+	width:100vw;	
+}
+.enamkiri{
+	padding-left:5em;
+	float:left;
+	width:50vw;	
+}
+.enamkanan{
+	width:50vw;
+	float:right;
+}
+
+.seventh {
+	background-image:url('images/background%202.png');
+	padding:0;
+	height: 100vh;	
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;	
+	position:relative;
+}
+.endleft {
+	float:left;
+	padding-left:10em;
+		
+}
+.endleft img{
+	padding-left:10em;
+	bottom:0;
+	left:0;
+	position:absolute;
+}
+.endright {
+	padding-right:12em;
+	padding-top:6em;
+	float:right;	
+}
+
+.endright h1{
+	color:#FFF;	
+}
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #FFF;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+-->
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: 50vh;
+  float: left;
+  width: 40vw;
+  border: 0;
+  }
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;																																																																																																																																																																																															
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: orange;
+}
+.popup .content {
+  max-height: 70%;
+  overflow: auto;
+}
